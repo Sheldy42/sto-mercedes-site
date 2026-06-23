@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Шапка -->
+  <header class="header">
+<div class="container">
+        <div class="logo">Mercedes-Benz</div>
+
+        <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="booking.html">Онлайн-запись</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="profile.html">Вход</a>
+        </nav>
+    </div>
+  </header>
+
+  <!-- Личный кабинет -->
+  <section class="profile">
+    <div class="profile-card">
+
+      <h2>Личный кабинет</h2>
+
+      <!-- Данные пользователя -->
+      <div class="profile-info">
+        <div class="avatar">Аватар</div>
+
+        <div class="user-data">
+          <p><strong>Имя:</strong> Иванов Иван</p>
+          <p><strong>Телефон:</strong> +7 (999) 000-00-00</p>
+          <button class="btn-edit">Редактировать</button>
+        </div>
+      </div>
+
+      <!-- История записей -->
+      <h3>Мои записи</h3>
+      <table class="orders">
+        <tr>
+          <th>Дата</th>
+          <th>Услуга</th>
+          <th>Статус</th>
+        </tr>
+        <tr>
+          <td>15.10.2025</td>
+          <td>Диагностика</td>
+          <td>В обработке</td>
+        </tr>
+        <tr>
+          <td>20.10.2025</td>
+          <td>ТО</td>
+          <td>Выполнено</td>
+        </tr>
+      </table>
+
+      <!-- Отзыв -->
+      <h3>Оставить отзыв</h3>
+      <textarea
+        id="reviewText"
+        placeholder="Ваш отзыв"
+        rows="5">
+      </textarea>
+
+      <button
+        class="btn-send"
+        id="sendReview">
+        Отправить
+      </button>
+
+    </div>
+  </section>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

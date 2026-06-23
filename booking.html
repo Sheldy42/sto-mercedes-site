@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн-запись | Mercedes-Benz</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">Mercedes-Benz</div>
+
+        <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="services.html">Услуги</a>
+            <a href="booking.html">Онлайн-запись</a>
+            <a href="contacts.html">Контакты</a>
+            <a href="profile.html">Вход</a>
+        </nav>
+    </div>
+
+  <section class="booking">
+  <div class="booking-card">
+    <h2>Онлайн-запись на обслуживание</h2>
+
+
+    <form class="booking-form" id="bookingForm">
+  
+  <label>
+    ФИО
+    <input type="text" id="fullname" placeholder="Иванов Иван Иванович" required>
+  </label>
+
+  <label>
+    Телефон
+    <input 
+        type="tel"
+        id="phone"
+        placeholder="+7 (___) ___-__-__"
+        maxlength="18"
+        required>
+  </label>
+
+  <label>
+    Услуга
+    <select id="service">
+      <option>Диагностика</option>
+      <option>Техническое обслуживание</option>
+      <option>Ремонт двигателя</option>
+      <option>Ремонт подвески</option>
+      <option>Компьютерная диагностика</option>
+    </select>
+  </label>
+
+  <label>
+    Дата записи
+    <input type="date" id="date" required>
+  </label>
+
+  <label>
+    Комментарий
+    <textarea id="comment" placeholder="Дополнительная информация"></textarea>
+  </label>
+
+  <button type="submit">Отправить заявку</button>
+
+    </form>
+</div>
+</section>
+</header>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

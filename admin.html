@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель администратора</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">Mercedes-Benz</div>
+
+        <nav class="menu">
+            <a href="index.html">Главная</a>
+            <a href="#">Заявки</a>
+            <a href="#">Отзывы</a>
+            <a href="#">Выход</a>
+        </nav>
+    </div>
+</header>
+
+<main class="admin-panel">
+
+    <h1>Панель администратора</h1>
+
+    <div class="stats">
+
+        <div class="stat-card">
+            <h3>Новые заявки</h3>
+            <p id="newBookings">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Выполненные</h3>
+            <p id="doneBookings">0</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>Отзывы</h3>
+            <p id="reviewsCount">0</p>
+        </div>
+
+    </div>
+
+    <section class="applications">
+
+    <h2>Новые заявки</h2>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Поиск по имени клиента..."
+            onkeyup="loadBookings()"
+        >
+
+        <select id="statusFilter" onchange="loadBookings()">
+
+            <option value="Все">Все статусы</option>
+            
+            <option value="Новая">Новая</option>
+            
+            <option value="В работе">В работе</option>
+            
+            <option value="Выполнена">Выполнена</option>
+            
+        </select>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Клиент</th>
+                <th>Телефон</th>
+                <th>Услуга</th>
+                <th>Дата записи</th>
+                <th>Создана</th>
+                <th>Комментарий</th>
+                <th>Статус</th>
+                <th>Действие</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="applicationsTable">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<section class="reviews-admin">
+
+    <h2>Отзывы клиентов</h2>
+
+    <div class="review-cards" id="reviewsContainer">
+
+    </div>
+
+</section>
+
+<section class="admin-actions">
+
+    <h2>Управление услугами</h2>
+
+    <div class="action-buttons">
+
+        <button>Добавить услугу</button>
+        <button>Редактировать услугу</button>
+        <button>Удалить услугу</button>
+
+    </div>
+
+</section>
+</main>
+
+<div id="commentModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeComment()">&times;</span>
+
+        <h2>Комментарий клиента</h2>
+
+        <h3 id="modalClientName"></h3>
+
+        <p id="modalComment"></p>
+
+    </div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+<div id="toast" class="toast"></div>
+
+</body>
+</html>
